@@ -1,11 +1,14 @@
 const Pool = require('pg').Pool
+require('dotenv').config();
+//connection bd
 const pool = new Pool({
-  user: 'wgqkqnyj',
-  host: 'abul.db.elephantsql.com',
-  database: 'wgqkqnyj',
-  password: 'DknBuScq2XwZpknWUoKfUAo_ZJW-R7R0',
-  port: 5432,
-})
+    user: process.env.user,
+    host: process.env.host,
+    database: process.env.mabd,
+    password: process.env.mdp,
+    port: 5432
+});
+console.log("Connexion réussie à la base de données");
 
 const getUsers = (request, response) => {
     pool.query('SELECT * FROM users ORDER BY id ASC', (error, results) => {

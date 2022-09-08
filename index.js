@@ -22,5 +22,5 @@ app.put('/users/:id', db.updateUser)
 app.delete('/users/:id', db.deleteUser)
 
   app.listen(port, () => {
-    console.log(`l'api tourne sur le port : ${port}.`)
+    console.log(`l'api tourne sur le port : http://localhost:${port}.`)
   })
