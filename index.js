@@ -12,7 +12,7 @@ app.use(
 )
 
 app.get('/', (request, response) => {
-    response.json({ info: 'Api avec Node.js, Express, Postgres' })
+    response.json({ info: 'Petite Api avec Node.js, Express, Postgres(hébergé sur le cloud), permettant de faire un crud sur la table users' })
   })
 
 app.get('/users', db.getUsers)
